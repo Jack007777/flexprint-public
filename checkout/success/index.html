@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Success · FlexPrint</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:999px;background:var(--accent)"></span>
+        <span>FlexPrint</span>
+        <span class="badge">POD 独立站（Cloudflare版）</span>
+      </a>
+      <nav class="navlinks">
+        <a href="/shop/">Shop</a>
+        <a href="/cart/">Cart <span id="navCartCount" class="badge" style="margin-left:6px">0</span></a>
+        <a href="/checkout/">Checkout</a>
+      </nav>
+    </header>
+
+    
+<section class="hero" style="padding:24px 18px">
+  <h1 style="font-size:34px;margin-bottom:8px">订单已创建</h1>
+  <p id="msg" class="small">加载中…</p>
+  <div class="row" style="margin-top:12px">
+    <a class="btn" href="/shop/">继续选购</a>
+    <a class="btn" href="/cart/">查看购物车</a>
+  </div>
+</section>
+
+<section id="bankCard" class="card" style="display:none">
+  <h3 style="margin-top:0">银行转账信息（SEPA）</h3>
+  <p class="small" style="margin-top:0">请在转账备注写：<strong id="ref"></strong>（订单号）。到账后可在后台手动标记为已付款。</p>
+  <table class="table">
+    <tbody>
+      <tr><th>收款人</th><td id="bankName"></td></tr>
+      <tr><th>IBAN</th><td id="iban"></td></tr>
+      <tr><th>BIC</th><td id="bic"></td></tr>
+      <tr><th>银行/备注</th><td id="bankNote"></td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+    <div class="footer">
+      © <span id="year"></span> FlexPrint · <span class="small">Bank transfer · PayPal · Klarna</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="../../assets/js/pages/success.js"></script>
+</body>
+</html>
+
+

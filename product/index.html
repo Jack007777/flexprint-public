@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product · FlexPrint</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:999px;background:var(--accent)"></span>
+        <span>FlexPrint</span>
+        <span class="badge">POD 独立站（Cloudflare版）</span>
+      </a>
+      <nav class="navlinks">
+        <a href="/shop/">Shop</a>
+        <a href="/cart/">Cart <span id="navCartCount" class="badge" style="margin-left:6px">0</span></a>
+        <a href="/checkout/">Checkout</a>
+      </nav>
+    </header>
+
+    
+<section class="hero" style="padding:24px 18px">
+  <h1 id="pTitle" style="font-size:34px;margin-bottom:8px">Product</h1>
+  <p id="pDesc" class="small" style="max-width:820px"></p>
+</section>
+
+<section class="grid">
+  <div class="card" style="grid-column: span 7;">
+    <div class="img" style="height:260px">Mockup / Preview</div>
+    <p class="small" style="margin-top:10px">后续你可以把“设计上传 + 预览图生成”接入 R2（本项目已提供上传接口）。</p>
+  </div>
+
+  <div class="card" style="grid-column: span 5;">
+    <h3 style="margin-top:0">选择规格</h3>
+    <div class="form">
+      <div class="col-12">
+        <label>Variant（颜色/尺码）</label>
+        <select id="variantSelect"></select>
+      </div>
+      <div class="col-6">
+        <label>数量</label>
+        <input id="qty" class="input" type="number" min="1" value="1" />
+      </div>
+      <div class="col-6">
+        <label>单价</label>
+        <input id="price" class="input" disabled />
+      </div>
+
+      <div class="col-12">
+        <button id="addToCartBtn" class="btn primary" style="width:100%">加入购物车</button>
+      </div>
+      <div class="col-12">
+        <a class="btn" href="/cart/" style="width:100%;justify-content:center">去购物车</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <div class="footer">
+      © <span id="year"></span> FlexPrint · <span class="small">Bank transfer · PayPal · Klarna</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="../assets/js/pages/product.js"></script>
+</body>
+</html>
+
+

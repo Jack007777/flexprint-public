@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin · FlexPrint</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:999px;background:var(--accent)"></span>
+        <span>FlexPrint</span>
+        <span class="badge">POD 独立站（Cloudflare版）</span>
+      </a>
+      <nav class="navlinks">
+        <a href="/shop/">Shop</a>
+        <a href="/cart/">Cart <span id="navCartCount" class="badge" style="margin-left:6px">0</span></a>
+        <a href="/checkout/">Checkout</a>
+      </nav>
+    </header>
+
+    
+<section class="hero" style="padding:24px 18px">
+  <h1 style="font-size:34px;margin-bottom:8px">后台（演示）</h1>
+  <p class="small">此页需要在浏览器 LocalStorage 里设置 ADMIN_TOKEN（或在请求头里带 Bearer token）。这里只做演示：查看订单列表、手动标记为已付款。</p>
+</section>
+
+<section class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="row">
+      <input id="token" class="input" style="width:340px" placeholder="ADMIN_TOKEN" />
+      <button id="saveToken" class="btn">保存</button>
+    </div>
+    <button id="refresh" class="btn primary">刷新订单</button>
+  </div>
+
+  <div id="adminList" class="small" style="margin-top:12px">加载中…</div>
+</section>
+
+
+    <div class="footer">
+      © <span id="year"></span> FlexPrint · <span class="small">Bank transfer · PayPal · Klarna</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="../assets/js/pages/admin.js"></script>
+</body>
+</html>
+
+

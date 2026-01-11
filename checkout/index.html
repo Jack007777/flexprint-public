@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout · FlexPrint</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:999px;background:var(--accent)"></span>
+        <span>FlexPrint</span>
+        <span class="badge">POD 独立站（Cloudflare版）</span>
+      </a>
+      <nav class="navlinks">
+        <a href="/shop/">Shop</a>
+        <a href="/cart/">Cart <span id="navCartCount" class="badge" style="margin-left:6px">0</span></a>
+        <a href="/checkout/">Checkout</a>
+      </nav>
+    </header>
+
+    
+<section class="hero" style="padding:24px 18px">
+  <h1 style="font-size:34px;margin-bottom:8px">Checkout</h1>
+  <p>支付方式：<strong>银行转账</strong> / <strong>PayPal</strong> / <strong>Klarna</strong>。下单后订单进 D1，上传文件进 R2。</p>
+</section>
+
+<section class="grid">
+  <div class="card" style="grid-column: span 7;">
+    <h3 style="margin-top:0">收货信息</h3>
+    <div class="form">
+      <div class="col-6">
+        <label>姓名</label>
+        <input id="name" class="input" placeholder="Max Mustermann" />
+      </div>
+      <div class="col-6">
+        <label>Email</label>
+        <input id="email" class="input" placeholder="max@example.com" />
+      </div>
+      <div class="col-12">
+        <label>地址</label>
+        <input id="addr1" class="input" placeholder="Musterstraße 1" />
+      </div>
+      <div class="col-6">
+        <label>邮编</label>
+        <input id="zip" class="input" placeholder="12345" />
+      </div>
+      <div class="col-6">
+        <label>城市</label>
+        <input id="city" class="input" placeholder="Berlin" />
+      </div>
+      <div class="col-6">
+        <label>国家（ISO2）</label>
+        <input id="country" class="input" value="DE" />
+      </div>
+      <div class="col-6">
+        <label>手机（可选）</label>
+        <input id="phone" class="input" placeholder="+49..." />
+      </div>
+
+      <div class="col-12">
+        <label>上传设计文件（可选）</label>
+        <input id="file" class="input" type="file" accept="image/png,image/jpeg,image/svg+xml,application/pdf" />
+        <div id="uploadHint" class="small" style="margin-top:6px">上传会存到 R2，并把 object key 记录在 D1（designs 表）。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="grid-column: span 5;">
+    <h3 style="margin-top:0">订单摘要</h3>
+    <div id="summary" class="small">加载中…</div>
+
+    <div style="margin-top:14px">
+      <label>支付方式</label>
+      <select id="paymentMethod">
+        <option value="bank_transfer">银行转账（SEPA）</option>
+        <option value="paypal">PayPal</option>
+        <option value="klarna">Klarna</option>
+      </select>
+      <div class="small" style="margin-top:8px;color:var(--muted)">
+        PayPal/Klarna 为第三方支付，通常会有交易费；银行转账成本最低。
+      </div>
+    </div>
+
+    <div id="klarnaBox" class="card" style="margin-top:14px;display:none">
+      <h3 style="margin-top:0">Klarna</h3>
+      <div id="klarna_container"></div>
+      <div class="small" style="margin-top:8px">
+        Klarna SDK 会在你点击支付时初始化并授权，然后由后端创建 Klarna order。
+      </div>
+    </div>
+
+    <div style="margin-top:14px">
+      <button id="placeOrderBtn" class="btn primary" style="width:100%">提交订单并支付</button>
+      <div class="small" style="margin-top:8px">
+        下单后：银行转账会显示收款账号；PayPal 会跳转支付；Klarna 会弹出支付授权。
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://x.klarnacdn.net/kp/lib/v1/api.js" async></script>
+
+
+    <div class="footer">
+      © <span id="year"></span> FlexPrint · <span class="small">Bank transfer · PayPal · Klarna</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="../assets/js/pages/checkout.js"></script>
+</body>
+</html>
+
+

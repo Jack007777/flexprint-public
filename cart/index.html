@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart · FlexPrint</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <a class="brand" href="/">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:999px;background:var(--accent)"></span>
+        <span>FlexPrint</span>
+        <span class="badge">POD 独立站（Cloudflare版）</span>
+      </a>
+      <nav class="navlinks">
+        <a href="/shop/">Shop</a>
+        <a href="/cart/">Cart <span id="navCartCount" class="badge" style="margin-left:6px">0</span></a>
+        <a href="/checkout/">Checkout</a>
+      </nav>
+    </header>
+
+    
+<section class="hero" style="padding:24px 18px">
+  <h1 style="font-size:34px;margin-bottom:8px">Cart</h1>
+  <p>购物车存在浏览器本地（LocalStorage）。下单时服务端会以 D1 的价格重新计算，防止被篡改。</p>
+</section>
+
+<section class="card">
+  <div id="cartEmpty" class="small">加载中…</div>
+  <div id="cartWrap" style="display:none">
+    <table class="table" id="cartTable">
+      <thead>
+        <tr>
+          <th>SKU</th>
+          <th>商品</th>
+          <th>规格</th>
+          <th>单价</th>
+          <th>数量</th>
+          <th>小计</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="row" style="justify-content:space-between;margin-top:14px">
+      <div class="kpi"><strong>合计：</strong><span id="cartTotal">€0.00</span></div>
+      <div class="row">
+        <a class="btn" href="/shop/">继续选购</a>
+        <a class="btn primary" href="/checkout/">去结账</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <div class="footer">
+      © <span id="year"></span> FlexPrint · <span class="small">Bank transfer · PayPal · Klarna</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="../assets/js/pages/cart.js"></script>
+</body>
+</html>
+
+
