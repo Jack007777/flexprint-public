@@ -4,25 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FlexPrint - Print-on-Demand Store</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260211-2" />
 </head>
 <body>
   <div class="page">
-    <header class="site-header">
-      <div class="topbar container">
+    <header class="site-header home-header">
+      <div class="topbar container home-topbar">
         <a class="brand" href="/">
           <img class="brand-logo" src="assets/img/flexprint-logo.png" alt="FlexPrint" />
         </a>
-        <div class="searchbar">
-          <input class="input" type="search" placeholder="Suche nach Produkten" aria-label="Suche" />
-          <button class="btn btn-ghost" type="button">Suchen</button>
-        </div>
-        <div class="header-actions">
+        <div class="header-actions home-actions">
           <a class="link" href="/admin/">Anmelden</a>
-          <a class="btn btn-primary" href="/cart/">Warenkorb <span id="navCartCount" class="pill">0</span></a>
+          <a class="btn btn-ghost" href="/cart/" aria-label="Warenkorb">Warenkorb</a>
         </div>
       </div>
-      <nav class="main-nav container">
+      <nav class="main-nav container home-nav">
         <a href="/shop/">T-SHIRTS</a>
         <a href="/shop/">LONGSLEEVES</a>
         <a href="/shop/">HOODIES &amp; SWEATS</a>
@@ -36,213 +32,24 @@
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <div class="eyebrow">Individuell gestalten und bedrucken</div>
-            <h1>Textildruck made in Germany, Fulfillment fuer Creator, Brands und Teams.</h1>
-            <p>Gestalte Produkte in Minuten, sende Designs direkt an die Produktion und liefere weltweit mit transparenter Kalkulation.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="designer/">Jetzt ausprobieren</a>
-            </div>
-            <div class="hero-steps">
-              <div class="step-badge"><span>1</span><span>Textil waehlen</span></div>
-              <div class="step-badge"><span>2</span><span>Design platzieren</span></div>
-              <div class="step-badge"><span>3</span><span>Wir versenden</span></div>
-            </div>
-          </div>
-          <div class="hero-visual reveal delay-1">
-            <div class="hero-card">
-              <div class="hero-card-top">
-                <span class="hero-badge">NEU</span>
-                <span class="hero-badge alt">48h Fulfillment</span>
-              </div>
-              <div class="hero-card-title">Dein Design. Deine Marke.</div>
-              <div class="hero-card-sub">Mockups, Druck und Versand aus einer Hand.</div>
-              <div class="hero-swatch">
-                <span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-            <div class="hero-blob"></div>
+    <main class="home-main">
+      <section class="hero-banner container reveal">
+        <div class="hero-banner-overlay">
+          <h1>Individuell gestalten und bedrucken</h1>
+          <p>Textildruck made in Germany · Fulfillment · Print on Demand</p>
+          <a class="btn hero-cta" href="/designer/">开始配置 T-shirt</a>
+          <div class="hero-steps">
+            <div class="step-badge"><span>1</span><span>Textil auswaehlen</span></div>
+            <div class="step-badge"><span>2</span><span>Individuell gestalten</span></div>
+            <div class="step-badge"><span>3</span><span>Wir erledigen den Rest</span></div>
           </div>
         </div>
       </section>
 
-      <section class="product-strip">
-        <div class="container section-head">
-          <div>
-            <h2>Textildruck vom Profi - individuell fuer jeden und ohne Mindestmenge</h2>
-            <p>Top Seller aus Bio-Baumwolle, Premium Hoodies und nachhaltige Basics.</p>
-          </div>
-          <div class="strip-actions">
-            <button class="icon-btn" type="button" aria-label="Zurueck">&lt;</button>
-            <button class="icon-btn" type="button" aria-label="Weiter">&gt;</button>
-          </div>
-        </div>
-        <div class="container">
-          <div class="product-track">
-            <article class="product-card">
-              <div class="product-thumb thumb-green"></div>
-              <div class="product-name">Classic Tee</div>
-              <div class="product-meta">180gsm, 16 Farben</div>
-            </article>
-            <article class="product-card">
-              <div class="product-thumb thumb-rose"></div>
-              <div class="product-name">Premium Damen</div>
-              <div class="product-meta">Weich, figurbetont</div>
-            </article>
-            <article class="product-card">
-              <div class="product-thumb thumb-slate"></div>
-              <div class="product-name">Hoodie Heavy</div>
-              <div class="product-meta">Oversized, 350gsm</div>
-            </article>
-            <article class="product-card">
-              <div class="product-thumb thumb-navy"></div>
-              <div class="product-name">Polo Sport</div>
-              <div class="product-meta">Pique, 12 Farben</div>
-            </article>
-            <article class="product-card">
-              <div class="product-thumb thumb-graphite"></div>
-              <div class="product-name">Eco Crewneck</div>
-              <div class="product-meta">Recycled Blend</div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="trust-cards">
-        <div class="container trust-grid">
-          <div class="trust-card">
-            <h3>Marken in Top-Qualitaet</h3>
-            <p>Stanley/Stella, Gildan, Hakro und weitere Bestseller am Lager.</p>
-          </div>
-          <div class="trust-card">
-            <h3>Einfach gestalten</h3>
-            <p>Designs hochladen, Varianten anlegen und sofort live schalten.</p>
-          </div>
-          <div class="trust-card">
-            <h3>Schnelle Abwicklung</h3>
-            <p>Durchlaufzeiten in 24-48h mit Tracking und Updates.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="category-grid">
-        <div class="container cat-grid">
-          <a class="cat-tile tile-tee" href="/shop/">
-            <span>T-SHIRTS</span>
-            <em>Starte mit Klassikern</em>
-          </a>
-          <a class="cat-tile tile-bag" href="/shop/">
-            <span>TASCHEN &amp; MEHR</span>
-            <em>Accessoires fuer Teams</em>
-          </a>
-          <a class="cat-tile tile-hoodie" href="/shop/">
-            <span>HOODIES &amp; SWEATS</span>
-            <em>Premium Streetwear</em>
-          </a>
-        </div>
-      </section>
-
-      <section class="partner-block">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Dein starker Partner fuer individuelle Kleidung</h2>
-              <p>Von der Idee bis zur Auslieferung - schnell, klar, skalierbar.</p>
-            </div>
-          </div>
-          <div class="icon-row">
-            <div class="icon-pill">Qualitaet</div>
-            <div class="icon-pill">Zuverlaessig</div>
-            <div class="icon-pill">Schnell</div>
-            <div class="icon-pill">Support</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="seo-block">
-        <div class="container seo-grid">
-          <div>
-            <h2>Textildruck in Top-Qualitaet - Willkommen bei FlexPrint</h2>
-            <p>Wir liefern On-Demand Druck fuer Creator Shops, Events und Teams. Von Premium Basics bis Workwear bekommst du alles aus einer Hand. Keine Mindestmengen, klare Kalkulation, kurze Laufzeiten.</p>
-            <p>Unsere Produktion arbeitet mit modernsten DTF- und DTG-Systemen. So bleiben Farben brillant und Details gestochen scharf - selbst bei kleinen Auflagen.</p>
-          </div>
-          <div class="seo-list">
-            <div>
-              <h3>Unsere Vorteile</h3>
-              <ul>
-                <li>Kein Lager - wir drucken on demand</li>
-                <li>Transparente Preise und schnelle Kalkulation</li>
-                <li>Nachhaltige Marken mit zertifizierten Stoffen</li>
-                <li>Automatisierte Abwicklung inklusive Tracking</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Standorte</h3>
-              <ul>
-                <li>Nurnberg, Deutschland</li>
-                <li>EU-weite Zustellung</li>
-                <li>Express auf Anfrage</li>
-                <li>Corporate und Event Projekte</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-block">
-        <div class="container contact-grid">
-          <div>
-            <h2>Noch Fragen? Wir beraten dich gerne!</h2>
-            <p>Sende uns kurz deine Anfrage und wir melden uns schnell zurueck.</p>
-          </div>
-          <form class="contact-form">
-            <input class="input" type="text" placeholder="Vor- und Nachname" aria-label="Vor- und Nachname" />
-            <input class="input" type="email" placeholder="E-Mail" aria-label="E-Mail" />
-            <input class="input" type="text" placeholder="Telefon (optional)" aria-label="Telefon" />
-            <textarea class="input" rows="4" placeholder="Deine Nachricht" aria-label="Nachricht"></textarea>
-            <button class="btn btn-primary" type="button">Nachricht absenden</button>
-          </form>
-        </div>
+      <section class="container home-heading">
+        <h2>Textildruck vom Profi - individuell fuer jeden &amp; ohne Mindestmenge</h2>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="footer-title">Service</div>
-          <a href="/shop/">Produktkatalog</a>
-          <a href="/checkout/">Versand</a>
-          <a href="/admin/">Hilfe &amp; Support</a>
-        </div>
-        <div>
-          <div class="footer-title">Unternehmen</div>
-          <a href="/admin/">Ueber uns</a>
-          <a href="/admin/">Presse</a>
-          <a href="/admin/">Jobs</a>
-        </div>
-        <div>
-          <div class="footer-title">Zahlungen</div>
-          <div class="pay-row">
-            <span>PayPal</span>
-            <span>Visa</span>
-            <span>Klarna</span>
-            <span>SEPA</span>
-          </div>
-        </div>
-        <div>
-          <div class="footer-title">Social</div>
-          <div class="pay-row">
-            <span>Instagram</span>
-            <span>Youtube</span>
-            <span>TikTok</span>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">(c) <span id="year"></span> FlexPrint. Alle Rechte vorbehalten.</div>
-    </footer>
   </div>
 
   <div id="toast" class="toast"></div>
