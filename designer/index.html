@@ -17,18 +17,24 @@
   </style>
 </head>
 <body>
-  <iframe class="frame" id="designerFrame" src="http://127.0.0.1:3040/" title="FlexPrint Designer"></iframe>
+  <iframe class="frame" id="designerFrame" src="" title="FlexPrint Designer"></iframe>
   <div class="fallback" id="designerFallback">
     <div>
       <h1>Designer nicht gestartet</h1>
-      <p>Starte den Designer-Server unter <code>print-designer-develop</code> und lade diese Seite neu.</p>
-      <p>Direktlink: <a href="http://127.0.0.1:3040/">http://127.0.0.1:3040/</a></p>
+      <p>Der Designer ist aktuell nicht erreichbar. Pruefe die Deployment-URL und lade die Seite neu.</p>
+      <p>Erwartete URL: <a id="designerLink" href="https://designer.flexprint.shop/">https://designer.flexprint.shop/</a></p>
     </div>
   </div>
   <script>
     (function () {
       var frame = document.getElementById('designerFrame');
       var fallback = document.getElementById('designerFallback');
+      var link = document.getElementById('designerLink');
+      var isLocalHost = /^(localhost|127\.0\.0\.1)$/i.test(window.location.hostname);
+      var designerURL = isLocalHost ? 'http://127.0.0.1:3040/' : 'https://designer.flexprint.shop/';
+      frame.src = designerURL;
+      link.href = designerURL;
+      link.textContent = designerURL;
       var timer = window.setTimeout(function () {
         fallback.classList.add('is-visible');
       }, 1500);
